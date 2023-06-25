@@ -309,7 +309,7 @@ input[type=range]::-webkit-slider-runnable-track  {
 }
 
 .hexa-input:focus {
-    transform: translateY(-4rem);
+    transform: translateY(-7rem);
 }
 
 .hexa-input::placeholder {

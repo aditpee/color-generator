@@ -54,7 +54,6 @@ function handleResultColorHSL(target) {
   
   resultColor.style = `background-color: hsl(${hueSlider.value}, ${satSlider.value}%, ${lightSlider.value}%);`
 
-  console.log(target.id == 'hueslider')
   if(target.id == 'hueslider') {
     target.style.backgroundImage = `linear-gradient(hsl(${target.value}, 100%, 50%), hsl(${target.value}, 100%, 50%))`
     document.documentElement.style.setProperty('--hue-thumb', `hsl(${target.value}, 100%, 50%)`)
