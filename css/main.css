@@ -316,7 +316,7 @@ input[type=range]::-webkit-slider-runnable-track  {
     color: hsl(var(--yellow-color), .5);
 }
 
-@media (max-height: 690px) {
+@media (max-height: 690px) and (max-width: 550px) {
     body {
         height: 100vh;
         overflow: hidden;
