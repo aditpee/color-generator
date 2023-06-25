@@ -308,6 +308,10 @@ input[type=range]::-webkit-slider-runnable-track  {
     align-self: center;
 }
 
+.hexa-input:focus {
+    transform: translateY(-4rem);
+}
+
 .hexa-input::placeholder {
     color: hsl(var(--yellow-color), .5);
 }
@@ -410,6 +414,10 @@ input[type=range]::-webkit-slider-runnable-track  {
     .hexa-input {
         width: 13rem;
         height: 2.5em;
+    }
+    
+    .hexa-input:focus {
+        transform: unset;
     }
 }
 

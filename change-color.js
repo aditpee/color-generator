@@ -32,6 +32,7 @@ function handleInputChange(e) {
     }
 }
 
+
 function handleResultColorRGB() {
   const redSlider = document.getElementById('redslider')
   const greenSlider = document.getElementById('greenslider')
