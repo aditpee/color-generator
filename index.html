@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Generator</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <main class="box-color">
+        <h1 id="title"><span>Color</span><span>Generator</span></h1>
+
+        <div class="result-color">
+
+        </div>
+
+        <!-- rgb generator -->
+
+        <ul id="rgb-generator" class="color-generator" tabindex="0">
+            <li class="slider">
+                <form action="">
+                    <div class="box red-color"></div>
+                    <input type="range" min="0" max="255" name="" id="redslider" oninput="redcurrentnumber.value=value">
+                    <input type="number" value="128" maxlength="3" min="0" max="255" name="" id="redcurrentnumber" oninput="redslider.value=value">
+                    
+                </form>
+            </li>
+            <li class="slider">
+                <form action="">
+                    <div class="box green-color"></div>
+                    <input type="range" min="0" max="255" name="" id="greenslider" oninput="greencurrentnumber.value=value">
+                    <input type="number" value="128" maxlength="3" min="0" max="255" name="" id="greencurrentnumber" oninput="greenslider.value=value">
+                    
+                </form>
+            </li>
+            <li class="slider">
+                <form action="">
+                    <div class="box blue-color"></div>
+                    <input type="range" min="0" max="255" name="" id="blueslider" oninput="bluecurrentnumber.value=value">
+                    <input type="number" value="128" maxlength="3" min="0" max="255" name="" id="bluecurrentnumber" oninput="blueslider.value=value">  
+                </form>
+            </li>
+
+            
+            <svg class="arrow next-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.99998 1L5.59998 2.5L13 10L5.59998 17.5L6.99998 19L16 10L6.99998 1Z" fill="#F8F8F8"/>
+            </svg>
+            <svg class="arrow previous-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.99998 1L5.59998 2.5L13 10L5.59998 17.5L6.99998 19L16 10L6.99998 1Z" fill="#F8F8F8"/>
+            </svg>
+        </ul>
+
+        
+        <!-- hsl generator -->
+
+        <ul id="hsl-generator" class="color-generator" tabindex="-1">
+            <li class="slider">
+                <form action="">
+                    <div class="box hue-color">H</div>
+                    <input type="range" min="0" max="360" name="" id="hueslider" oninput="huecurrentnumber.value=value">
+                    <input type="number" value="180" maxlength="3" min="0" max="360" name="" id="huecurrentnumber" oninput="hueslider.value=value">
+                    
+                </form>
+            </li>
+            <li class="slider">
+                <form action="">
+                    <div class="box sat-color">S</div>
+                    <input type="range" min="0" max="100" name="" id="satslider" oninput="satcurrentnumber.value=value">
+                    <input type="number" value="50" maxlength="3" min="0" max="100" name="" id="satcurrentnumber" oninput="satslider.value=value">
+                    
+                </form>
+            </li>
+            <li class="slider">
+                <form action="">
+                    <div class="box light-color">L</div>
+                    <input type="range" min="0" max="100" name="" id="lightslider" oninput="lightcurrentnumber.value=value">
+                    <input type="number" value="50" maxlength="3" min="0" max="100" name="" id="lightcurrentnumber" oninput="lightslider.value=value">  
+                </form>
+            </li>
+
+            
+            <svg class="arrow next-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.99998 1L5.59998 2.5L13 10L5.59998 17.5L6.99998 19L16 10L6.99998 1Z" fill="#F8F8F8"/>
+            </svg>
+            <svg class="arrow previous-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.99998 1L5.59998 2.5L13 10L5.59998 17.5L6.99998 19L16 10L6.99998 1Z" fill="#F8F8F8"/>
+            </svg>
+        </ul>
+
+
+        <!-- hexa generator -->
+
+        <ul id="hexa-generator" class="color-generator" tabindex="-1">
+
+            <input class="hexa-input" type="text" maxlength="6" placeholder="0-9 A-F">
+
+            
+            <svg class="arrow next-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.99998 1L5.59998 2.5L13 10L5.59998 17.5L6.99998 19L16 10L6.99998 1Z" fill="#F8F8F8"/>
+            </svg>
+            <svg class="arrow previous-arrow" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.99998 1L5.59998 2.5L13 10L5.59998 17.5L6.99998 19L16 10L6.99998 1Z" fill="#F8F8F8"/>
+            </svg>
+        </ul>
+    </main>
+
+<script>
+    // fix when pressed enter key, refresh the page 
+    const forms = document.querySelectorAll('form')
+    forms.forEach(form => {
+    form.addEventListener('submit', function(e) {
+        e.preventDefault()
+    })
+    })
+</script>
+<script src="change-color.js"></script>
+<script src="slider.js"></script>
+<script src="text-animation.js"></script>
+</body>
+</html>
