@@ -312,11 +312,12 @@ input[type=range]::-webkit-slider-runnable-track  {
     color: hsl(var(--yellow-color), .5);
 }
 
-
-
-
-
-
+@media (max-height: 690px) {
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
 
 @media (min-width: 620px) {
         
