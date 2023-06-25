@@ -332,21 +332,21 @@ input[type=range]::-webkit-slider-runnable-track  {
     }
 
     h1 span:nth-child(1) span.active {
-        transform: translateY(-2rem);
+        transform: translateY(-1.5rem);
     }
     
     h1 span:nth-child(1) span.next-active,
     h1 span:nth-child(1) span.prev-active {
-        transform: translateY(-1rem);
+        transform: translateY(-.8rem);
     }
     
     h1 span:nth-child(2) span.active {
-        transform: translateY(2rem);
+        transform: translateY(1.5rem);
     }
     
     h1 span:nth-child(2) span.next-active,
     h1 span:nth-child(2) span.prev-active {
-        transform: translateY(1rem);
+        transform: translateY(.8rem);
     }
 
     .result-color {
