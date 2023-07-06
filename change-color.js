@@ -1,3 +1,12 @@
+// fix bug scroll input range input range in mobile
+window.onscroll = function() {
+  rangeInputs.forEach(input => input.addEventListener('touchmove', function() {
+    window.scrollTo(0, scrollY)
+  }))
+}
+
+
+
 const rangeInputs = document.querySelectorAll('input[type="range"]')
 const numberInputs = document.querySelectorAll('input[type="number"]')
 const hexInput = document.querySelector(".hexa-input")
@@ -29,25 +38,8 @@ function handleInputChange(e) {
   } else if(currentGenerator.id == 'hsl-generator') {
     handleResultColorHSL(target)
   }
-
-
-  window.scrollTo(0, 0)
-  // window.onscroll = function(e) {
-  //   window.scrollTo(0, 0)
-  //   console.log('ok')
-  // }
     
 }
-
-window.onscroll = function() {
-  rangeInputs.forEach(input => input.addEventListener('input', function() {
-    window.scrollTo(0, 0)
-  }))
-}
-
-
-
-
 
 function handleResultColorRGB() {
   const redSlider = document.getElementById('redslider')
