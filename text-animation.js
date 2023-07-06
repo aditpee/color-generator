@@ -22,7 +22,17 @@ function wrapTextSpan(text) {
 }
 
 function animationTextHover(char) {
-    char.addEventListener('mouseover', function() {
+    if(innerWidth > 1000) {
+        char.addEventListener('mouseover', addClassAnimation)
+        char.addEventListener('mouseleave', removeClassAnimation)
+    } else {
+        char.addEventListener('touchstart', addClassAnimation)
+        char.addEventListener('touchend', removeClassAnimation)
+
+    }
+
+
+    function addClassAnimation() {
         char.classList.add('active')
         if(char.nextElementSibling !== null && char.previousElementSibling !== null) {
             char.nextElementSibling.classList.add('next-active')
@@ -32,8 +42,8 @@ function animationTextHover(char) {
         } else if (char.nextElementSibling == null && char.previousElementSibling !== null ) {
             char.previousElementSibling.classList.add('prev-active')
         }  
-    })
-    char.addEventListener('mouseleave', function() {
+    }
+    function removeClassAnimation() {
         char.classList.remove('active')
         if(char.nextElementSibling !== null && char.previousElementSibling !== null) {
             char.nextElementSibling.classList.remove('next-active')
@@ -43,7 +53,7 @@ function animationTextHover(char) {
         } else if (char.nextElementSibling == null && char.previousElementSibling !== null ) {
             char.previousElementSibling.classList.remove('prev-active')
         }  
-    })
+    }
 }
 
 
