@@ -5,7 +5,6 @@ const hexInput = document.querySelector(".hexa-input")
 
 rangeInputs.forEach(input => input.addEventListener('input', handleInputChange))
 numberInputs.forEach(input => input.addEventListener('input', handleInputChange))
-
 hexInput.addEventListener("input", handleResultColorHexa)
 
 function handleInputChange(e) {
@@ -20,17 +19,34 @@ function handleInputChange(e) {
       if(val > parseInt(max) ) {
         e.target.value = max
       }
-    }   
-    target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
+  }   
+  target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
+  
+  const currentGenerator = target.parentNode.parentNode.parentNode
+  
+  if(currentGenerator.id == 'rgb-generator') {
+    handleResultColorRGB()
+  } else if(currentGenerator.id == 'hsl-generator') {
+    handleResultColorHSL(target)
+  }
+
+
+  window.scrollTo(0, 0)
+  // window.onscroll = function(e) {
+  //   window.scrollTo(0, 0)
+  //   console.log('ok')
+  // }
     
-    const currentGenerator = target.parentNode.parentNode.parentNode
-    
-    if(currentGenerator.id == 'rgb-generator') {
-      handleResultColorRGB()
-    } else if(currentGenerator.id == 'hsl-generator') {
-      handleResultColorHSL(target)
-    }
 }
+
+window.onscroll = function() {
+  rangeInputs.forEach(input => input.addEventListener('input', function() {
+    window.scrollTo(0, 0)
+  }))
+}
+
+
+
 
 
 function handleResultColorRGB() {
